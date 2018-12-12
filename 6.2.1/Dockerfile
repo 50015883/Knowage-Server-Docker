@@ -179,15 +179,15 @@ RUN wget "${KNOWAGE_WHATIF_URL}" && \
 WORKDIR ${KNOWAGE_DIRECTORY}/${APACHE_TOMCAT_PACKAGE}/lib
 
 #download knowage libs and put them into apache tomcat lib
-RUN wget "${LIB_COMMONS_LOGGING_URL}"
-RUN wget "${LIB_COMMONS_LOGGING_API_URL}"
-RUN wget "${LIB_CONCURRENT_URL}"
-RUN wget "${LIB_MYSQL_CONNECTOR_URL}"
-RUN wget "${LIB_GERONIMO_COMMONJ_URL}"
-RUN wget "${LIB_MYFOO_COMMONJ_URL}"
+RUN wget -o commons-logging-1.1.1.jar "${LIB_COMMONS_LOGGING_URL}"
+RUN wget -o commons-logging-api-1.1.jar "${LIB_COMMONS_LOGGING_API_URL}"
+RUN wget -o oswego-concurrent-1.3.4.jar "${LIB_CONCURRENT_URL}"
+RUN wget -o mysql-connector-java-5.1.33.jar "${LIB_MYSQL_CONNECTOR_URL}"
+RUN wget -o geronimo-commonj_1.1_spec-1.0.jar "${LIB_GERONIMO_COMMONJ_URL}"
+RUN wget -o commonj-1.0.jar "${LIB_MYFOO_COMMONJ_URL}"
 
 #dowload DBs libraries and put them into apache tomcat lib
-RUN wget "${LIB_POSTGRESQL_CONNECTOR_URL}"
+RUN wget -o postgresql-42.2.4.jar "${LIB_POSTGRESQL_CONNECTOR_URL}"
 
 #go to apache tomcat configuration directory
 WORKDIR ${KNOWAGE_DIRECTORY}/${APACHE_TOMCAT_PACKAGE}/conf
