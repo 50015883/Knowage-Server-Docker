@@ -2,6 +2,10 @@
 
 [![Docker badge](https://img.shields.io/docker/pulls/knowagelabs/knowage-server-docker.svg)](https://hub.docker.com/r/knowagelabs/knowage-server-docker/)
 
+## Changed history
+修改6.2.1的Dockerfile,增加wget -o参数，确保下载文件名称匹配正确，仅修改。
+
+
 ## What is Knowage?
 
 Knowage is the professional open source suite for modern business analytics over traditional sources and big data systems.
